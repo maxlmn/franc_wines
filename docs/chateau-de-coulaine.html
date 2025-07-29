@@ -32,12 +32,17 @@
         <div class="wine-card">
           <img src="images/chateau-de-coulaine/wine_diablesse.jpg" alt="La Diablesse" class="wine-image">
           <div class="wine-content">
-            <h3 class="wine-name">La Diablesse & Les Picasses 2020</h3>
-            <p class="wine-details">Small production wines from old vines, showcasing the estate's most prestigious terroirs. These wines offer fine-grained tannins and exceptional complexity, representing the pinnacle of the estate's winemaking philosophy.</p>
+            <h3 class="wine-name">La Diablesse 2020</h3>
+            <p class="wine-details">A superb terroir of chalk, clay and sand producing wines of exceptional complexity. This wine offers fine-grained tannins and exceptional depth, representing the pinnacle of the estate's winemaking philosophy with remarkable aging potential.</p>
           </div>
         </div>
         <div class="wine-card">
-          <img src="images/chateau-de-coulaine/wines_closdelacure.jpg" alt="Clos de la Cure" class="wine-image">
+          <div class="wine-content">
+            <h3 class="wine-name">Les Picasses 2020</h3>
+            <p class="wine-details">From the well-known, south-facing lieu-dit on clay-limestone soils, this wine showcases the estate's most prestigious terroirs. These wines offer fine-grained tannins and exceptional complexity, representing the pinnacle of the estate's winemaking philosophy.</p>
+          </div>
+        </div>
+        <div class="wine-card">
           <div class="wine-content">
             <h3 class="wine-name">Sinople 2022</h3>
             <p class="wine-details">Chenin Blanc from 30-year-old vines, offering exceptional depth and complexity. Notes of orchard fruit and balanced acidity create a wine of remarkable purity and age-worthiness, reflecting the estate's commitment to traditional winemaking methods.</p>
@@ -56,6 +61,9 @@
       </div>
     </div>
 
+    <!-- Tasting Notes Container -->
+    <div id="tasting-notes-container"></div>
+
     <!-- Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -68,7 +76,13 @@
     </div>
   </div>
 
+  <script src="tasting-notes.js"></script>
   <script>
+    // Load tasting notes when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      loadTastingNotes('chateau de coulaine');
+    });
+
     function openModal(img) {
       var modal = document.getElementById("imageModal");
       var modalImg = document.getElementById("modalImage");

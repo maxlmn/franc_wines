@@ -50,6 +50,9 @@
       </div>
     </div>
 
+    <!-- Tasting Notes Container -->
+    <div id="tasting-notes-container"></div>
+
     <!-- Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -62,7 +65,13 @@
     </div>
   </div>
 
+  <script src="tasting-notes.js"></script>
   <script>
+    // Load tasting notes when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      loadTastingNotes('domaine aux moines');
+    });
+
     function openModal(img) {
       var modal = document.getElementById("imageModal");
       var modalImg = document.getElementById("modalImage");

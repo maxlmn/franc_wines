@@ -4,207 +4,7 @@
   <meta charset="UTF-8">
   <title>Théo Blet – Franc Wines</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #2e2e2e;
-      background: linear-gradient(135deg, #f8f6f0 0%, #f5f2eb 100%);
-      min-height: 100vh;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .back-link {
-      display: inline-block;
-      margin: 30px 0 20px;
-      color: #5c5754;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: 500;
-    }
-    
-    .back-link:hover {
-      color: #2c2928;
-      text-decoration: underline;
-    }
-    
-    .hero-section {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      margin-bottom: 40px;
-    }
-    
-    .hero-image {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .hero-content {
-      padding: 40px;
-    }
-    
-    .producer-title {
-      font-size: 3em;
-      margin: 0 0 10px 0;
-      color: #2c2928;
-      font-weight: 300;
-      letter-spacing: 2px;
-    }
-    
-    .producer-location {
-      font-size: 1.3em;
-      color: #5c5754;
-      margin-bottom: 30px;
-      font-style: italic;
-    }
-    
-    .producer-description {
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #2e2e2e;
-      margin: 0;
-    }
-    
-    .content-section {
-      background: white;
-      border-radius: 12px;
-      padding: 40px;
-      margin-bottom: 40px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    }
-    
-    .section-title {
-      font-size: 2.2em;
-      margin: 0 0 30px 0;
-      color: #2c2928;
-      font-weight: 400;
-      border-bottom: 2px solid rgba(44, 41, 40, 0.2);
-      padding-bottom: 15px;
-    }
-    
-    .wines-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-    
-    .wine-card {
-      background: #f8f6f0;
-      border-radius: 8px;
-      padding: 25px;
-      border-left: 4px solid #5c5754;
-      position: relative;
-    }
-    
-    .wine-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-    
-    .wine-name {
-      font-size: 1.4em;
-      margin: 0 0 10px 0;
-      color: #2c2928;
-      font-weight: 500;
-    }
-    
-    .wine-details {
-      font-size: 1em;
-      line-height: 1.7;
-      color: #2e2e2e;
-      margin: 0;
-    }
-    
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    
-    .gallery-image {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      display: block;
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 40px 0;
-      background: rgba(255, 255, 255, 0.95);
-      margin-top: 60px;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-    
-    .contact-info {
-      font-size: 1.1em;
-      color: #2c2928;
-      margin: 10px 0;
-    }
-    
-    .contact-info a {
-      color: #5c5754;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .contact-info a:hover {
-      color: #2c2928;
-      text-decoration: underline;
-    }
-    
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 15px;
-      }
-      
-      .hero-content {
-        padding: 30px 25px;
-      }
-      
-      .producer-title {
-        font-size: 2.2em;
-      }
-      
-      .content-section {
-        padding: 30px 25px;
-      }
-      
-      .section-title {
-        font-size: 1.8em;
-      }
-      
-      .wines-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
@@ -213,9 +13,9 @@
     <div class="hero-section">
       <img src="images/theo-blet/banner.jpg" alt="Théo Blet" class="hero-image">
       <div class="hero-content">
-        <h1 class="producer-title">Théo Blet</h1>
-        <p class="producer-location">Saumur, Loire Valley</p>
-        <p class="producer-description">Fourth-generation grower who started vinifying just over 1 hectare of his family's best plots. Farmed organically and made with a light touch, these are expressive and energetic wines from shallow clay-limestone soils over tuffeau bedrock. Théo represents the new generation of Loire Valley winemakers, combining traditional knowledge with modern sensibility.</p>
+        <h1 class="producer-title-large">Théo Blet</h1>
+        <p class="producer-location-large">Saumur, Loire Valley</p>
+        <p class="producer-description-large">Fourth-generation grower who started vinifying just over 1 hectare of his family's best plots. Farmed organically and made with a light touch, these are expressive and energetic wines from shallow clay-limestone soils over tuffeau bedrock. Théo represents the new generation of Loire Valley winemakers, combining traditional knowledge with modern sensibility.</p>
       </div>
     </div>
 
@@ -224,13 +24,17 @@
       <div class="wines-grid">
         <div class="wine-card">
           <img src="images/theo-blet/wine_lapeyanne.jpg" alt="La Peyanne" class="wine-image">
-          <h3 class="wine-name">La Peyanne 2022</h3>
-          <p class="wine-details">Chenin Blanc from the estate's finest plots, showcasing the unique terroir of Saumur. Aromas of stone fruits and orange blossom create a wine of exceptional balance and complexity. The shallow clay-limestone soils over tuffeau bedrock contribute to the wine's distinctive minerality and freshness.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">La Peyanne 2022</h3>
+            <p class="wine-details">Chenin Blanc from the estate's finest plots, showcasing the unique terroir of Saumur. Aromas of stone fruits and orange blossom create a wine of exceptional balance and complexity. The shallow clay-limestone soils over tuffeau bedrock contribute to the wine's distinctive minerality and freshness.</p>
+          </div>
         </div>
         <div class="wine-card">
           <img src="images/theo-blet/wine_lecorbin.jpg" alt="Le Corbin" class="wine-image">
-          <h3 class="wine-name">Le Corbin 2022</h3>
-          <p class="wine-details">Cabernet Franc offering floral and juicy characteristics with refined structure. This wine exemplifies Théo's light-touch approach to winemaking, allowing the terroir to express itself fully while maintaining the grape's natural elegance and drinkability.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">Le Corbin 2022</h3>
+            <p class="wine-details">Cabernet Franc offering floral and juicy characteristics with refined structure. This wine exemplifies Théo's light-touch approach to winemaking, allowing the terroir to express itself fully while maintaining the grape's natural elegance and drinkability.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -240,10 +44,16 @@
       <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;">Théo Blet's approach to winemaking is rooted in respect for tradition while embracing organic farming principles. The estate's small size allows for meticulous attention to detail, from vineyard management to cellar work. The shallow clay-limestone soils over tuffeau bedrock create wines of exceptional minerality and freshness, while the organic farming practices ensure wines that truly reflect their terroir.</p>
       
       <div class="gallery-grid">
-        <img src="images/theo-blet/1.jpg" alt="Vineyard Work" class="gallery-image">
-        <img src="images/theo-blet/2.jpg" alt="Vineyard Detail" class="gallery-image">
-        <img src="images/theo-blet/3.jpg" alt="Estate View" class="gallery-image">
+        <img src="images/theo-blet/1.jpg" alt="Vineyard Work" class="gallery-image" onclick="openModal(this)">
+        <img src="images/theo-blet/2.jpg" alt="Vineyard Detail" class="gallery-image" onclick="openModal(this)">
+        <img src="images/theo-blet/3.jpg" alt="Estate View" class="gallery-image" onclick="openModal(this)">
       </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
     </div>
 
     <div class="footer">
@@ -251,5 +61,33 @@
       <p class="contact-info">WhatsApp: <a href="https://wa.me/6598274841">+65 9827 4841</a></p>
     </div>
   </div>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById("imageModal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html> 

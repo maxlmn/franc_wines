@@ -24,18 +24,24 @@
       <div class="wines-grid">
         <div class="wine-card">
           <img src="images/chateau-de-coulaine/wine_chateaudecoulaine.jpg" alt="Chinon" class="wine-image">
-          <h3 class="wine-name">Chinon 2022</h3>
-          <p class="wine-details">A classic expression of Cabernet Franc from the estate's finest plots. Aromas of fresh herbs, black pepper, and dark fruit create a complex and elegant profile. The wine showcases the unique terroir of Chinon with refined tannins and balanced acidity.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">Chinon 2022</h3>
+            <p class="wine-details">A classic expression of Cabernet Franc from the estate's finest plots. Aromas of fresh herbs, black pepper, and dark fruit create a complex and elegant profile. The wine showcases the unique terroir of Chinon with refined tannins and balanced acidity.</p>
+          </div>
         </div>
         <div class="wine-card">
           <img src="images/chateau-de-coulaine/wine_diablesse.jpg" alt="La Diablesse" class="wine-image">
-          <h3 class="wine-name">La Diablesse & Les Picasses 2020</h3>
-          <p class="wine-details">Small production wines from old vines, showcasing the estate's most prestigious terroirs. These wines offer fine-grained tannins and exceptional complexity, representing the pinnacle of the estate's winemaking philosophy.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">La Diablesse & Les Picasses 2020</h3>
+            <p class="wine-details">Small production wines from old vines, showcasing the estate's most prestigious terroirs. These wines offer fine-grained tannins and exceptional complexity, representing the pinnacle of the estate's winemaking philosophy.</p>
+          </div>
         </div>
         <div class="wine-card">
           <img src="images/chateau-de-coulaine/wines_closdelacure.jpg" alt="Clos de la Cure" class="wine-image">
-          <h3 class="wine-name">Sinople 2022</h3>
-          <p class="wine-details">Chenin Blanc from 30-year-old vines, offering exceptional depth and complexity. Notes of orchard fruit and balanced acidity create a wine of remarkable purity and age-worthiness, reflecting the estate's commitment to traditional winemaking methods.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">Sinople 2022</h3>
+            <p class="wine-details">Chenin Blanc from 30-year-old vines, offering exceptional depth and complexity. Notes of orchard fruit and balanced acidity create a wine of remarkable purity and age-worthiness, reflecting the estate's commitment to traditional winemaking methods.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -45,9 +51,15 @@
       <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;">The estate's 19 hectares are planted across diverse soil types including clay-gravel, clay-limestone, and sandy clay, each contributing unique characteristics to the wines. The historic château, dating back to the 15th century, stands as a testament to the region's rich winemaking heritage. Jean and Tatiana de Bonnaventure maintain traditional methods while embracing organic certification, ensuring wines that honor both history and modern quality standards.</p>
       
       <div class="gallery-grid">
-        <img src="images/chateau-de-coulaine/1.jpg" alt="Vineyard View" class="gallery-image">
-        <img src="images/chateau-de-coulaine/2.jpg" alt="Vineyard Detail" class="gallery-image">
+        <img src="images/chateau-de-coulaine/1.jpg" alt="Vineyard View" class="gallery-image" onclick="openModal(this)">
+        <img src="images/chateau-de-coulaine/2.jpg" alt="Vineyard Detail" class="gallery-image" onclick="openModal(this)">
       </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
     </div>
 
     <div class="footer">
@@ -55,5 +67,33 @@
       <p class="contact-info">WhatsApp: <a href="https://wa.me/6598274841">+65 9827 4841</a></p>
     </div>
   </div>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById("imageModal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html> 

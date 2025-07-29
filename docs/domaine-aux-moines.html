@@ -24,13 +24,17 @@
       <div class="wines-grid">
         <div class="wine-card">
           <img src="images/domaine-aux-moines/wine_rocheauxmoines.jpg" alt="La Roche aux Moines" class="wine-image">
-          <h3 class="wine-name">La Roche aux Moines 2022</h3>
-          <p class="wine-details">100% Chenin Blanc from the estate's finest plots. Aromas of pear, quince, and lime with remarkable mineral tension. Aged 12 months in oak and 6 months in stainless steel, this wine showcases the unique terroir of Savennières with exceptional balance and complexity.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">La Roche aux Moines 2022</h3>
+            <p class="wine-details">100% Chenin Blanc from the estate's finest plots. Aromas of pear, quince, and lime with remarkable mineral tension. Aged 12 months in oak and 6 months in stainless steel, this wine showcases the unique terroir of Savennières with exceptional balance and complexity.</p>
+          </div>
         </div>
         <div class="wine-card">
           <img src="images/domaine-aux-moines/wine_berceau.jpg" alt="Le Berceau des Fées" class="wine-image">
-          <h3 class="wine-name">Le Berceau des Fées 2023</h3>
-          <p class="wine-details">Young vine Chenin Blanc offering vibrant freshness and immediate appeal. Notes of white flowers and citrus create an expressive, approachable wine. Vin de France designation allows for maximum flexibility in winemaking while maintaining the estate's commitment to quality.</p>
+          <div class="wine-content">
+            <h3 class="wine-name">Le Berceau des Fées 2023</h3>
+            <p class="wine-details">Young vine Chenin Blanc offering vibrant freshness and immediate appeal. Notes of white flowers and citrus create an expressive, approachable wine. Vin de France designation allows for maximum flexibility in winemaking while maintaining the estate's commitment to quality.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -40,10 +44,16 @@
       <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 30px;">The estate's 12 hectares are meticulously farmed using organic and biodynamic principles. The schist and sandstone soils provide excellent drainage and mineral complexity, while the proximity to the Loire River moderates temperatures throughout the growing season. In the cellar, Tessa Laroche employs a gentle, non-interventionist approach, allowing the terroir to express itself fully.</p>
       
       <div class="gallery-grid">
-        <img src="images/domaine-aux-moines/1.jpg" alt="Vineyards" class="gallery-image">
-        <img src="images/domaine-aux-moines/2.jpg" alt="Vineyard Detail" class="gallery-image">
-        <img src="images/domaine-aux-moines/3.jpg" alt="Estate View" class="gallery-image">
+        <img src="images/domaine-aux-moines/1.jpg" alt="Vineyards" class="gallery-image" onclick="openModal(this)">
+        <img src="images/domaine-aux-moines/2.jpg" alt="Vineyard Detail" class="gallery-image" onclick="openModal(this)">
+        <img src="images/domaine-aux-moines/3.jpg" alt="Estate View" class="gallery-image" onclick="openModal(this)">
       </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage">
     </div>
 
     <div class="footer">
@@ -51,5 +61,33 @@
       <p class="contact-info">WhatsApp: <a href="https://wa.me/6598274841">+65 9827 4841</a></p>
     </div>
   </div>
+
+  <script>
+    function openModal(img) {
+      var modal = document.getElementById("imageModal");
+      var modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById("imageModal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html> 
